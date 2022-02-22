@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.sql.Date;
 
 @Entity
 @Table(name = "novel")
@@ -16,4 +17,9 @@ import javax.persistence.Table;
 @Setter
 public class Novel extends Book {
     private String storySummary;
+
+    public Novel(String title, float price, int totalUnitsSold, Date publicationDate, int nbPages, Category category, Author author, Library library, String storySummary) {
+        super(title, price, totalUnitsSold, publicationDate, nbPages, category, author, library);
+        this.storySummary = storySummary;
+    }
 }

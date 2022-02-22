@@ -24,4 +24,9 @@ public class Magazine extends Book {
             inverseJoinColumns = @JoinColumn(name = "keyword_id", referencedColumnName = "id"))
     private Collection<Keyword> keywords ;
 
+    public Magazine(String title, float price, int totalUnitsSold, Date publicationDate, int nbPages, Category category, Author author, Library library, Date nextReleaseDate, Collection<Keyword> keywords) {
+        super(title, price, totalUnitsSold, publicationDate, nbPages, category, author, library);
+        this.nextReleaseDate = nextReleaseDate;
+        this.keywords = keywords;
+    }
 }

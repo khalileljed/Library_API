@@ -26,4 +26,9 @@ public class Library {
     @JsonIgnore
     @OneToMany(mappedBy = "library", fetch = FetchType.LAZY)
     private List<Book> books = new ArrayList<>();
+
+    public Library(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
 }

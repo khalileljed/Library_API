@@ -27,6 +27,17 @@ public class Book {
     private Date publicationDate;
     private int nbPages;
 
+    public Book(String title, float price, int totalUnitsSold, Date publicationDate, int nbPages, Category category, Author author, Library library) {
+        this.title = title;
+        this.price = price;
+        this.totalUnitsSold = totalUnitsSold;
+        this.publicationDate = publicationDate;
+        this.nbPages = nbPages;
+        this.category = category;
+        this.author = author;
+        this.library = library;
+    }
+
     @Enumerated(EnumType.STRING)
     private Category category;
 

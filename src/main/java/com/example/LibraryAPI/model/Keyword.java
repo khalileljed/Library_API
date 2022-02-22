@@ -18,4 +18,8 @@ public class Keyword {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String content ;
+
+    public Keyword(String content) {
+        this.content = content;
+    }
 }

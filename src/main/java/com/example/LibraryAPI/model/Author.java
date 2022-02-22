@@ -24,4 +24,8 @@ public class Author {
     @OneToMany(mappedBy = "author", fetch = FetchType.LAZY)
     private List<Book> books = new ArrayList<>();
 
+    public Author(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 }
